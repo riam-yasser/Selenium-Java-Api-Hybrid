@@ -30,7 +30,7 @@ import static org.apache.pdfbox.cos.COSDictionaryLateBinding.log;
  */
 public class Validations extends BasePage {
 
-	private static final Logger LOGGER = (Logger) LogManager.getLogger(SeleniumUtils.class.getName());
+	private static final Logger LOGGER = (Logger) LogManager.getLogger(ActionsUtils.class.getName());
 
 	/** testCaseStatus the status of the test case. */
 	boolean testCaseStatus = true;

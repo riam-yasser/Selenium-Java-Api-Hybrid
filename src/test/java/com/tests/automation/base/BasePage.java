@@ -79,4 +79,11 @@ public class BasePage {
 			return false;
 		}
 	}
+
+    public static WebElement waitForVisibility(WebElement element,int timeoutInSeconds) {
+        return new WebDriverWait(
+                Setup.getDriver(),
+                Duration.ofSeconds(timeoutInSeconds)
+        ).until(ExpectedConditions.visibilityOf(element));
+    }
 }

@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.io.File;
 import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Base64;
@@ -28,7 +27,7 @@ import com.tests.automation.base.BasePage;
  * on webelement. It is a repository so that same code need not to be written
  * again.
  */
-public class SeleniumUtils extends BasePage {
+public class ActionsUtils extends BasePage {
 
 	/** properties. */
 	protected Properties properties;
@@ -39,14 +38,14 @@ public class SeleniumUtils extends BasePage {
 	/** driver. */
 	private static WebDriver driver;
 
-	private static final Logger LOGGER = (Logger) LogManager.getLogger(SeleniumUtils.class.getName());
+	private static final Logger LOGGER = (Logger) LogManager.getLogger(ActionsUtils.class.getName());
 
 	/**
 	 * Instanciation de common utils.
 	 */
-	public SeleniumUtils() {
+	public ActionsUtils() {
 		super(driver);
-		SeleniumUtils.driver = Setup.getDriver();
+		ActionsUtils.driver = Setup.getDriver();
 	}
 
 	/**
@@ -558,4 +557,16 @@ public class SeleniumUtils extends BasePage {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		element.click();
 	}
+
+    /**
+     * method to scroll into the element in the page and click on it
+     *
+     */
+    public void scrollToElementAndClick(WebElement element) {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({behavior:'smooth', block:'center'});",element);
+        element.click();
+
+    }
 }

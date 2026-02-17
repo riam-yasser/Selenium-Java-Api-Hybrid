@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import static com.tests.automation.base.BasePage.waitForElementToBeClickable;
-import static com.tests.automation.base.BasePage.waitForElementToBeVisible;
 
 public class LoginPage extends BasePage {
 
@@ -59,7 +57,7 @@ public class LoginPage extends BasePage {
     }
 
     public static WebElement getLoginBarMenu() {
-        waitForElementToBeClickable(loginBarMenu);
+       // waitForElementToBeClickable(loginBarMenu);
         return loginBarMenu;
     }
 

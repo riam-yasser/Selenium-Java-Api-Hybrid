@@ -1,4 +1,4 @@
-package com.tests.automation.step_definitions;
+package com.tests.automation.step_definitions.front;
 
 import com.tests.automation.page_objects.WishlistPage;
 import com.tests.automation.actions.ActionsUtils;

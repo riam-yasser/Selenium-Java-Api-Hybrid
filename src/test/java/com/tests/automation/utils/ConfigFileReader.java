@@ -16,7 +16,7 @@ public class ConfigFileReader {
 	public ConfigFileReader() {
 
 		BufferedReader reader = null;
-        String propertyFilePath = "src/test/resources/configs/env-config.properties";
+        String propertyFilePath = "src/test/resources/configs/env-front-config.properties";
         try {
 
 			reader = new BufferedReader(new FileReader(propertyFilePath));

@@ -28,10 +28,10 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 		plugin = {
 				"pretty",
 				"summary",
-				"html:target/report/cucumber-report.html",
-				"json:target/report/cucumber.json",
+				"html:target/report-front/cucumber-report.html",
+				"json:target/report-front/cucumber.json",
 		},
-		tags = "",
+		tags = "@logout",
 		monochrome = true,
 		snippets = CAMELCASE
 )

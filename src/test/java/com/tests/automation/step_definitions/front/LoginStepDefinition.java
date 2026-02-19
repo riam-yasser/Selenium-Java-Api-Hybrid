@@ -1,4 +1,4 @@
-package com.tests.automation.step_definitions;
+package com.tests.automation.step_definitions.front;
 
 import com.tests.automation.actions.ActionsUtils;
 import com.tests.automation.actions.Validations;

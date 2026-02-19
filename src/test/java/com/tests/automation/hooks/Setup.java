@@ -32,7 +32,7 @@ public class Setup {
     @Before(order = 0)
     public void sendAutomationIdentifier() {
         // Définir l'URL de base sans appeler d'endpoint spécifique
-        RestAssured.baseURI = "https://fo-gessousl-d.caas-nonprod.intra.groupama.fr";
+        RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
         // Configurer le RequestSpecification avec un header global
         // Ignorer les erreurs SSL

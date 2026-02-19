@@ -4,7 +4,7 @@ import com.tests.automation.constants.EnvType;
 
 import java.util.Properties;
 
-import static com.tests.automation.constants.Constants.DEV_CONFIG_PROPERTIES_PATH;
+import static com.tests.automation.constants.Constants.ENV_BACK_CONFIG_PROPERTIES_PATH;
 import static com.tests.automation.constants.Constants.TEST_CONFIG_PROPERTIES_PATH;
 
 public class ConfigLoader {
@@ -16,7 +16,7 @@ public class ConfigLoader {
 		String env = System.getProperty("env", String.valueOf(EnvType.DEV));
 		switch (EnvType.valueOf(env)) {
 		case DEV:
-			properties = PropertyUtils.propertyLoader(DEV_CONFIG_PROPERTIES_PATH);
+			properties = PropertyUtils.propertyLoader(ENV_BACK_CONFIG_PROPERTIES_PATH);
 			break;
 		case TEST:
 			properties = PropertyUtils.propertyLoader(TEST_CONFIG_PROPERTIES_PATH);
